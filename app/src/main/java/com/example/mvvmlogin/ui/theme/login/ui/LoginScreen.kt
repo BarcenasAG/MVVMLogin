@@ -1,6 +1,5 @@
 package com.example.mvvmlogin.ui.theme.login.ui
 
-import androidx.compose.foundation.Image
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -24,12 +23,12 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.colorResource
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import com.example.mvvmlogin.R
+import com.example.mvvmlogin.ui.theme.login.composables.HeaderImage
 import kotlinx.coroutines.launch
 
 @Composable
@@ -48,9 +47,13 @@ fun LoginScreen(viewModel: LoginViewModel) {
 fun Login(modifier: Modifier, viewModel: LoginViewModel) {
 
     val email: String by viewModel.email.observeAsState(initial = "")
+
     val password: String by viewModel.password.observeAsState(initial = "")
+
     val loginEnable: Boolean by viewModel.loginEnable.observeAsState(initial = false)
+
     val isLoading: Boolean by viewModel.isLoading.observeAsState(initial = false)
+
     val coroutineScope = rememberCoroutineScope()
 
     if (isLoading) {
@@ -67,15 +70,18 @@ fun Login(modifier: Modifier, viewModel: LoginViewModel) {
         Column(
             modifier = modifier
         ) {
-            HeaderImage(Modifier.align(Alignment.CenterHorizontally))
+            HeaderImage(Modifier.align(Alignment.CenterHorizontally)
+            )
             Spacer(modifier = Modifier
                 .padding(16.dp)
             )
-            EmailField(email) { viewModel.onLoginChange(it, password) }
+            EmailField(email) { viewModel.onLoginChange(it, password)
+            }
             Spacer(modifier = Modifier
                 .padding(4.dp)
             )
-            PasswordField(password) { viewModel.onLoginChange(email, it) }
+            PasswordField(password) { viewModel.onLoginChange(email, it)
+            }
             Spacer(modifier = Modifier
                 .padding(8.dp)
             )
@@ -167,10 +173,3 @@ fun EmailField(email: String, onTextFieldChanged: (String) -> Unit) {
     )
 }
 
-@Composable
-fun HeaderImage(modifier: Modifier) {
-    Image(
-        painter = painterResource(id = R.drawable.logo_shugar_pink),
-        contentDescription = "Header",
-        modifier = modifier)
-}
