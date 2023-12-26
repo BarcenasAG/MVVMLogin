@@ -27,6 +27,5 @@ fun LoginButton(loginEnable: Boolean, onLoginSelected: () -> Unit) {
     }
 }
 
-
 fun LoginButtonPreview(){
 }

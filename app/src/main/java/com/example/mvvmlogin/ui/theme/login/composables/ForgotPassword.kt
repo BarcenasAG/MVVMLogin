@@ -23,5 +23,4 @@ fun ForgotPassword(modifier: Modifier) {
 @Preview
 @Composable
 fun ForgotPasswordPreview(){
-
 }
