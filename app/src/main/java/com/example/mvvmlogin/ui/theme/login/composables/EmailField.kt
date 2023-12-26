@@ -18,7 +18,8 @@ import com.example.mvvmlogin.R
 @Composable
 fun EmailField(email: String, onTextFieldChanged: (String) -> Unit) {
 
-    TextField(value = email,
+    TextField(
+        value = email,
         onValueChange = { onTextFieldChanged(it) },
         placeholder = {
             Text(text = "Email")
