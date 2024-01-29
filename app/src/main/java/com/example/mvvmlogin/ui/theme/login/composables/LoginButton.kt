@@ -22,6 +22,7 @@ fun LoginButton(loginEnable: Boolean, onLoginSelected: () -> Unit) {
         ),
         enabled = loginEnable
     ) {
-        Text(text = "Iniciar sesion")
+        Text(
+            text = "Iniciar sesion")
     }
 }
