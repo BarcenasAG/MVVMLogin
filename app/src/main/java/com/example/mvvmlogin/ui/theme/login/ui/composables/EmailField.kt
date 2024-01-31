@@ -1,4 +1,4 @@
-package com.example.mvvmlogin.ui.theme.login.composables
+package com.example.mvvmlogin.ui.theme.login.ui.composables
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.text.KeyboardOptions

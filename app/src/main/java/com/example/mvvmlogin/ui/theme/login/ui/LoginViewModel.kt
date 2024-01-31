@@ -32,7 +32,7 @@ class LoginViewModel : ViewModel() {
 
     suspend fun onLoginSelected() {
         _isLoading.value = true
-        delay(1100)
+        delay(100)
         _isLoading.value = false
     }
 }

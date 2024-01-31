@@ -1,4 +1,4 @@
-package com.example.mvvmlogin.ui.theme.login.composables
+package com.example.mvvmlogin.ui.theme.login.ui.composables
 
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.material3.Button
@@ -10,14 +10,16 @@ import androidx.compose.ui.res.colorResource
 import com.example.mvvmlogin.R
 
 @Composable
-fun LoginButton(loginEnable: Boolean, onLoginSelected: () -> Unit) {
+fun LoginButton(
+    loginEnable: Boolean,
+    onLoginSelected: () -> Unit
+) {
     Button(
         onClick = { onLoginSelected() },
         modifier = Modifier
             .fillMaxWidth(),
         colors = ButtonDefaults.buttonColors(colorResource(R.color.pink_general),
             disabledContainerColor = colorResource(R.color.pink_general_gradle),
-            contentColor = colorResource(R.color.white),
             disabledContentColor = colorResource(R.color.white)
         ),
         enabled = loginEnable

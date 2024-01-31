@@ -1,4 +1,4 @@
-package com.example.mvvmlogin.ui.theme.login.composables
+package com.example.mvvmlogin.ui.theme.login.ui.composables
 
 import androidx.compose.foundation.clickable
 import androidx.compose.material3.Text

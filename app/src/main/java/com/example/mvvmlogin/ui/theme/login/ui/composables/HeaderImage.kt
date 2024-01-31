@@ -1,4 +1,4 @@
-package com.example.mvvmlogin.ui.theme.login.composables
+package com.example.mvvmlogin.ui.theme.login.ui.composables
 
 import androidx.compose.foundation.Image
 import androidx.compose.runtime.Composable
